@@ -8,4 +8,4 @@ def main():
   print("Current time:", current_time)
 
 if __name__ == "__main__":
-main()
+  main()
