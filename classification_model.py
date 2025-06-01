@@ -19,20 +19,20 @@ def main():
     X, y = load_data(PROCESSED_DATASET)
     
     # Split data into training and test sets
-    X_train, X_test, y_train, y_test = ____(X, y, random_state=1993)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1993)
 
     # Train the model using the training set
-    model = train_model(____, ____)
+    model = train_model(X_train, y_train)
     
     # Calculate test set metrics
-    metrics = evaluate_model(model, ____, ____)
+    metrics = evaluate_model(model, X_test, y_test)
 
     print("====================Test Set Metrics==================")
     print(json.dumps(metrics, indent=2))
     print("======================================================")
 
     # Save metrics into json file
-    save_metrics(____)
+    save_metrics(metrics)
     plot_confusion_matrix(model, X_test, y_test)
 
 
